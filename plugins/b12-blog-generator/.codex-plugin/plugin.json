@@ -7,16 +7,9 @@
     "email": "support@b12.io",
     "url": "https://www.b12.io"
   },
-  "homepage": "https://www.b12.io/websites/",
+  "homepage": "https://www.b12.io",
   "license": "Apache-2.0",
-  "keywords": [
-    "blog",
-    "website",
-    "blogging",
-    "b12",
-    "hosting",
-    "web-design"
-  ],
+  "keywords": ["blog", "website", "blogging", "b12", "hosting", "web-design"],
   "skills": "./skills/",
   "interface": {
     "displayName": "B12 Blog Generator",
@@ -24,9 +17,7 @@
     "longDescription": "Tell it who your blog is for and what topics you want to cover, and it generates a B12 blog site ready to publish \u2014 hosting, design, and layout handled. Built for service businesses and professionals who want to start publishing without setting up a website first.",
     "developerName": "B12",
     "category": "Productivity",
-    "capabilities": [
-      "Read"
-    ],
+    "capabilities": ["Read"],
     "websiteURL": "https://www.b12.io",
     "privacyPolicyURL": "https://www.b12.io/privacy-policy/",
     "termsOfServiceURL": "https://www.b12.io/terms-of-service/",

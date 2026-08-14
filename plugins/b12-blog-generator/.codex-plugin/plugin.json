@@ -13,7 +13,7 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "B12 Blog Generator",
-    "shortDescription": "Create a blog website in seconds",
+    "shortDescription": "Create a blog site in seconds",
     "longDescription": "Tell it who your blog is for and what topics you want to cover, and it generates a B12 blog site ready to publish \u2014 hosting, design, and layout handled. Built for service businesses and professionals who want to start publishing without setting up a website first.",
     "developerName": "B12",
     "category": "Productivity",
@@ -23,6 +23,7 @@
     "termsOfServiceURL": "https://www.b12.io/terms-of-service/",
     "brandColor": "#623CDC",
     "logo": "./assets/B12-logo.png",
+    "composerIcon": "./assets/B12-logo.png",
     "defaultPrompt": [
       "Create a blog for my accounting firm",
       "I want to start a blog for new dog owners",

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Logo Generator"
+  short_description: "Design a logo with B12"
+  brand_color: "#623CDC"
+  default_prompt: "Design a logo for:"
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,20 @@
+{
+  "name": "b12-openai-plugins",
+  "interface": {
+    "displayName": "B12 OpenAI Plugins"
+  },
+  "plugins": [
+    {
+      "name": "b12-logo-generator",
+      "source": {
+        "source": "local",
+        "path": "./plugins/b12-logo-generator"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Creativity"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "logo-generator",
+  "version": "1.0.0",
+  "description": "Design a downloadable logo in seconds. Describe your business and get SVG and PNG logo files that are yours to use anywhere, plus an optional B12 website in the same colors.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "license": "Apache-2.0",
+  "keywords": ["logo", "branding", "design", "icon", "b12", "website"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Logo Generator",
+    "shortDescription": "Create a logo in seconds",
+    "longDescription": "Say what the logo is for, and give a business name only if you want one in the design. It draws the logo, shows you a preview, and hands over the files in a zip — SVG and PNG, as a horizontal lockup plus a square icon for avatars and favicons when there is a name, or a text-free mark when there isn't. Then it can generate a matching B12 website using the same brand colors.",
+    "developerName": "B12",
+    "category": "Creativity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://www.b12.io",
+    "privacyPolicyURL": "https://www.b12.io/privacy-policy/",
+    "termsOfServiceURL": "https://www.b12.io/terms-of-service/",
+    "brandColor": "#4B22E8",
+    "logo": "./assets/b12-logo.svg",
+    "composerIcon": "./assets/b12-logo.svg",
+    "defaultPrompt": [
+      "Design a logo for my company",
+      "I need a logo for my coffee shop",
+      "Create a modern logo"
+    ]
+  }
+}

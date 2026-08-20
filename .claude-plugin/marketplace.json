@@ -22,14 +22,14 @@
       "keywords": ["website", "b12", "hosting", "web-design"]
     },
     {
-      "name": "b12-logo-generator",
-      "displayName": "B12 Logo Generator",
+      "name": "logo-generator",
+      "displayName": "Logo Generator",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/b12io/b12-plugins.git",
-        "path": "plugins/b12-logo-generator"
+        "path": "plugins/logo-generator"
       },
-      "description": "Design a downloadable SVG logo for a business or project, then generate a matching B12 website using the same brand colors.",
+      "description": "Design a logo for a business or project, delivered as downloadable SVG and PNG files, then generate a matching B12 website using the same brand colors.",
       "author": {
         "name": "B12"
       },

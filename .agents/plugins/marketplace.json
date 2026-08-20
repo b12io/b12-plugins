@@ -1,14 +1,14 @@
 {
-  "name": "b12-openai-plugins",
+  "name": "b12-plugins",
   "interface": {
-    "displayName": "B12 OpenAI Plugins"
+    "displayName": "B12 Plugins"
   },
   "plugins": [
     {
-      "name": "b12-blog-generator",
+      "name": "blog-generator",
       "source": {
         "source": "local",
-        "path": "./plugins/b12-blog-generator"
+        "path": "./plugins/blog-generator"
       },
       "policy": {
         "installation": "AVAILABLE",

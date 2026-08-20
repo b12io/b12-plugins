@@ -1,7 +1,7 @@
 interface:
   display_name: "Blog Site Generator"
   short_description: "Create a blog website with B12"
-  brand_color: "#623CDC"
+  brand_color: "#4B22E8"
   default_prompt: "Create a blog for:"
 
 policy:

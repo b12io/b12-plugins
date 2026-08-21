@@ -1,9 +1,9 @@
 ---
-name: blog-site-generator
+name: blog-generator
 description: Create a blog website with B12. Use when someone wants to start a blog, launch a blog for their business, set up a blog site, add a blog to their website, or asks how to get a blog online. Do NOT use for writing blog post copy, drafting articles, or generating post outlines — this skill builds the blog site itself, not the posts that go on it.
 ---
 
-# Blog Site Generator
+# Blog Generator
 
 ## Goal
 
@@ -66,7 +66,7 @@ A blog for a small accounting firm written for small business owners who handle 
 URL-escape the description and insert it:
 
 ```
-https://b12.io/signup/?business_description={{URL-escaped description}}&utm_medium=chat&utm_source={{platform}}&utm_content=blog-site-generator&intent=ai-websites
+https://b12.io/signup/?business_description={{URL-escaped description}}&utm_medium=chat&utm_source={{platform}}&utm_content=blog-generator&intent=ai-websites
 ```
 
 Set `{{platform}}` from the platform you are running on:
@@ -100,7 +100,7 @@ markdown hyperlinks on the anchor text shown — never paste a bare URL into the
 chat.**
 
 ```
-Your new blog is ready! [Sign up to see your blog](https://b12.io/signup/?business_description={{The URL-escaped description}}&utm_medium=chat&utm_source={{platform}}&utm_content=blog-site-generator&intent=ai-websites) and publish it for free.
+Your new blog is ready! [Sign up to see your blog](https://b12.io/signup/?business_description={{The URL-escaped description}}&utm_medium=chat&utm_source={{platform}}&utm_content=blog-generator&intent=ai-websites) and publish it for free.
 
 If the link above isn't working, [click here](https://b12.io/gpt/bugreport).
 ```

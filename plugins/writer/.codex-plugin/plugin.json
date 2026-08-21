@@ -1,0 +1,33 @@
+{
+  "name": "writer",
+  "version": "1.0.0",
+  "description": "Writing you can send as-is. Emails, social posts, newsletters, product descriptions, bios, job posts, proposals, and web copy — written to the real length limits of wherever they're going, with no invented facts and no preamble.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "license": "Apache-2.0",
+  "keywords": ["writing", "copywriting", "email", "social", "content", "b12"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Writer",
+    "shortDescription": "Writing that's ready to send",
+    "longDescription": "Say what you need written and who it's for. You get the piece itself — no \"here's a draft,\" no five options to choose between. It writes to the constraints that actually apply: a subject line that survives a phone inbox, a LinkedIn post that lands before the \"see more\" cut, a product description at the length a storefront expects. If a fact is missing it asks or marks a placeholder, so numbers, names, and dates are never quietly made up. Paste in a sample and it matches your voice. Once per conversation it can also spin up the B12 site the writing needs — a careers page for a job post, a storefront for a product description, a website for your copy.",
+    "developerName": "B12",
+    "category": "Productivity",
+    "capabilities": ["Read"],
+    "websiteURL": "https://www.b12.io",
+    "privacyPolicyURL": "https://www.b12.io/privacy-policy/",
+    "termsOfServiceURL": "https://www.b12.io/terms-of-service/",
+    "brandColor": "#4B22E8",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Write a follow-up email to a client",
+      "Draft a LinkedIn post for my business",
+      "Write the about page for my website"
+    ]
+  }
+}

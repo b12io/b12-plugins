@@ -22,8 +22,8 @@
     "privacyPolicyURL": "https://www.b12.io/privacy-policy/",
     "termsOfServiceURL": "https://www.b12.io/terms-of-service/",
     "brandColor": "#4B22E8",
-    "logo": "./assets/b12-logo.svg",
-    "composerIcon": "./assets/b12-logo.svg",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
     "defaultPrompt": [
       "Create a blog for my accounting firm",
       "I want to start a blog for new dog owners",

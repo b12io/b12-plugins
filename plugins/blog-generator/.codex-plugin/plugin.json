@@ -1,0 +1,33 @@
+{
+  "name": "blog-generator",
+  "version": "1.0.0",
+  "description": "Create a blog website in minutes with B12. Describe who your blog is for and what it covers, and get a ready-to-publish blog site.",
+  "author": {
+    "name": "B12.io",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "license": "Apache-2.0",
+  "keywords": ["blog", "website", "blogging", "b12", "hosting", "web-design"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Blog Generator",
+    "shortDescription": "Create a blog site in minutes",
+    "longDescription": "Tell the plugin about your blog audience and the topics you want to cover, and it will generate a ready to publish blog site on B12 — hosting, design, and layout handled. Built for service businesses and professionals who want to start publishing without setting up a website first.",
+    "developerName": "B12",
+    "category": "Productivity",
+    "capabilities": ["Read"],
+    "websiteURL": "https://www.b12.io",
+    "privacyPolicyURL": "https://www.b12.io/privacy-policy/",
+    "termsOfServiceURL": "https://www.b12.io/terms-of-service/",
+    "brandColor": "#4B22E8",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Create a blog for my accounting firm",
+      "I want to start a blog for new dog owners",
+      "Set up a blog for my law practice about estate planning"
+    ]
+  }
+}

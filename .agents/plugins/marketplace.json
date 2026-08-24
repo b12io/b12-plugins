@@ -5,6 +5,18 @@
   },
   "plugins": [
     {
+      "name": "blog-generator",
+      "source": {
+        "source": "local",
+        "path": "./plugins/blog-generator"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
       "name": "logo-generator",
       "source": {
         "source": "local",

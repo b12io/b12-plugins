@@ -25,9 +25,9 @@
     "logo": "./assets/icon.svg",
     "composerIcon": "./assets/icon.svg",
     "defaultPrompt": [
-      "Write a follow-up email to a client",
       "Draft a LinkedIn post for my business",
-      "Write the about page for my website"
+      "Write the about page for my website",
+      "Write a follow-up email to a client"
     ]
   }
 }

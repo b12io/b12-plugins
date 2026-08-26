@@ -20,23 +20,6 @@
       "repository": "https://github.com/b12io/b12-claude-plugin",
       "license": "Apache-2.0",
       "keywords": ["website", "b12", "hosting", "web-design"]
-    },
-    {
-      "name": "writer",
-      "displayName": "Writer",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/b12io/b12-plugins.git",
-        "path": "plugins/writer"
-      },
-      "description": "Write emails, social posts, newsletters, product descriptions, bios, job posts, proposals, and web copy — to the channel's real length limits, with no invented facts and no preamble.",
-      "author": {
-        "name": "B12"
-      },
-      "homepage": "https://www.b12.io",
-      "repository": "https://github.com/b12io/b12-plugins",
-      "license": "Apache-2.0",
-      "keywords": ["writing", "copywriting", "email", "social", "content", "b12"]
     }
   ]
 }

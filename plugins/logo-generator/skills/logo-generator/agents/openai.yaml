@@ -1,0 +1,8 @@
+interface:
+  display_name: "Logo Generator"
+  short_description: "Create a logo in seconds"
+  brand_color: "#4B22E8"
+  default_prompt: "Design a logo for:"
+
+policy:
+  allow_implicit_invocation: true

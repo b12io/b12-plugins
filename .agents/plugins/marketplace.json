@@ -17,6 +17,18 @@
       "category": "Productivity"
     },
     {
+      "name": "logo-generator",
+      "source": {
+        "source": "local",
+        "path": "./plugins/logo-generator"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Creativity"
+    },
+    {
       "name": "writer",
       "source": {
         "source": "local",

@@ -1,0 +1,33 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "Write, review, and fix code in any language — complete, runnable blocks you can paste, with nothing left out. Or skip the code and have a web app or website built on B12.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "license": "Apache-2.0",
+  "keywords": ["code", "programming", "html", "javascript", "web", "b12"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Code",
+    "shortDescription": "Code that's ready to run",
+    "longDescription": "Ask for code and get code — a complete file, a working component, a whole corrected block — in whatever language or framework you name. It writes the parts most assistants skip: no \"rest of the code goes here,\" every import in place, and a plain note about what the code still needs before it runs, whether that's an install command, a key you have to supply, or the backend a contact form won't work without. Paste a snippet in for review or unit tests and the full block comes back, not a list of line edits. And when you'd rather have the finished thing than the source, it can generate a web app or website on B12 instead.",
+    "developerName": "B12",
+    "category": "Productivity",
+    "capabilities": ["Read"],
+    "websiteURL": "https://www.b12.io",
+    "privacyPolicyURL": "https://www.b12.io/privacy-policy/",
+    "termsOfServiceURL": "https://www.b12.io/terms-of-service/",
+    "brandColor": "#4B22E8",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Generate a web app",
+      "Create a landing page in HTML, CSS, and JavaScript",
+      "Review this code snippet"
+    ]
+  }
+}

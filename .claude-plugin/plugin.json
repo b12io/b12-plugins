@@ -3,7 +3,7 @@
   "description": "B12 plugin with two skills: Website Generator (create a B12 website from a brief description) and B12 Website Editor (edit a live B12 website using Claude's browser access in Claude Cowork).",
   "version": "1.0.0",
   "author": {
-    "name": "B12"
+    "name": "B12.io"
   },
   "keywords": ["website", "b12", "hosting", "web-design"],
   "license": "Apache-2.0"

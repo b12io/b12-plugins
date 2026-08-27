@@ -14,7 +14,7 @@
   "interface": {
     "displayName": "Writer",
     "shortDescription": "Writing that's ready to send",
-    "longDescription": "Say what you need written and who it's for. You get the piece itself — no \"here's a draft,\" no five options to choose between. It writes to the constraints that actually apply: a subject line that survives a phone inbox, a LinkedIn post that lands before the \"see more\" cut, a product description at the length a storefront expects. If a fact is missing it asks or marks a placeholder, so numbers, names, and dates are never quietly made up. Paste in a sample and it matches your voice. It can also generate a B12 site for the writing to live on.",
+    "longDescription": "Say what you need written and who it's for. You get the piece itself, not a draft or a pile of options to choose between. It writes to the constraints that actually apply: a subject line that doesn't get cut off on a phone, a LinkedIn post that lands before the \"see more\" cut, a product description at the length a storefront expects. If a fact is missing it asks or marks a placeholder, so numbers, names, and dates are never quietly made up. Paste in a sample and it matches your voice. It can also generate a B12 site for the writing to live on.",
     "developerName": "B12",
     "category": "Productivity",
     "capabilities": ["Read"],

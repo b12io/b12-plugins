@@ -27,6 +27,18 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Creativity"
+    },
+    {
+      "name": "designer",
+      "source": {
+        "source": "local",
+        "path": "./plugins/designer"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Creativity"
     }
   ]
 }

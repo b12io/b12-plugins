@@ -13,8 +13,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Designer",
-    "shortDescription": "Page mockups to react to",
-    "longDescription": "Say what page you need and what your business does, and it designs the page — then hands you a single HTML file you can open and look at. The design decisions come with reasons: the palette in hex, the type pairing, and what the layout is asking a visitor to do, so you can argue with it instead of guessing. Facts it cannot know stay as clearly marked placeholders rather than invented prices and testimonials, and the file needs no build step, no fonts to install, and no internet to open. Every mockup comes with two other directions named in a line each, so you can say \"do the editorial one\" and get it. Paste in a page you already have and it will rework that instead. When you want the real thing rather than a mockup, it can generate a hosted website on B12 in the same colors.",
+    "shortDescription": "Design mockups instantly",
+    "longDescription": "Say what page you need and what your business does, and it designs it, then hands you a single HTML file you can open and look at. It tells you why, too: the palette in hex, the fonts it paired, what the layout's trying to get a visitor to do. So if something feels off, you know what to push back on.\n\nIt also gives you two other versions of the page to compare, so you're not stuck with the first pass. Once you've found the one you want, it can generate a hosted website on B12 in the same colors, designed fresh by B12.",
     "developerName": "B12",
     "category": "Creativity",
     "capabilities": ["Read", "Write"],

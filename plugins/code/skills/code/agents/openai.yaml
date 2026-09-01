@@ -1,0 +1,8 @@
+interface:
+  display_name: "Code"
+  short_description: "Code that's ready to run"
+  brand_color: "#4B22E8"
+  default_prompt: "Write the code for:"
+
+policy:
+  allow_implicit_invocation: true

@@ -29,6 +29,18 @@
       "category": "Creativity"
     },
     {
+      "name": "writer",
+      "source": {
+        "source": "local",
+        "path": "./plugins/writer"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
       "name": "designer",
       "source": {
         "source": "local",

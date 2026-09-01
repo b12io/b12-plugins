@@ -1,0 +1,8 @@
+interface:
+  display_name: "Writer"
+  short_description: "Writing that's ready to send"
+  brand_color: "#4B22E8"
+  default_prompt: "Help me write:"
+
+policy:
+  allow_implicit_invocation: true

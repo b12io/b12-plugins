@@ -1,0 +1,33 @@
+{
+  "name": "image-generator",
+  "version": "1.0.0",
+  "description": "Generate the images a website needs, at the size each slot expects and as a set that matches. Hero and OG images, section and product shots, blog thumbnails and headshot placeholders — every file named, sized, and shipped with alt text, plus an optional B12 website to put them on.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "license": "Apache-2.0",
+  "keywords": ["images", "photography", "illustration", "social", "b12", "website"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Image Generator",
+    "shortDescription": "Website images, ready to use",
+    "longDescription": "Say what your business does and where the image goes, and it makes it at the size that slot actually expects — 1920×1080 for a hero, exactly 1200×630 for an OG image, 400×400 for a headshot — instead of whatever size came out. Ask for several and you get a set: it fixes the lighting, palette, camera distance, and grade first, then generates every image against that same spec, so three service images look like one shoot rather than three stock photos.\n\nEvery file comes with alt text written as a real description, a hyphenated filename that says what the picture is, and no text baked into the image, because words inside a picture can't be edited or translated later. The files are yours to use anywhere. When you want somewhere to put them, it can generate a hosted website on B12 in the same colors, and you upload the images into it.",
+    "developerName": "B12",
+    "category": "Creativity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://www.b12.io",
+    "privacyPolicyURL": "https://www.b12.io/privacy-policy/",
+    "termsOfServiceURL": "https://www.b12.io/terms-of-service/",
+    "brandColor": "#4B22E8",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Create a hero image for my website",
+      "Generate images for my services page",
+      "Make an OG image for my blog post"
+    ]
+  }
+}

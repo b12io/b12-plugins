@@ -14,7 +14,7 @@
   "interface": {
     "displayName": "Designer",
     "shortDescription": "Design mockups instantly",
-    "longDescription": "Say what page you need and what your business does, and it designs it, then hands you a single HTML file you can open and look at. It tells you why, too: the palette in hex, the fonts it paired, what the layout's trying to get a visitor to do. So if something feels off, you know what to push back on.\n\nIt also gives you two other versions of the page to compare, so you're not stuck with the first pass. Once you've found the one you want, it can generate a hosted website on B12 in the same colors, designed fresh by B12.",
+    "longDescription": "Say what page you need and what your business does, and it designs it, then hands you a single HTML file you can open and look at. It tells you why, too: the palette in hex, the fonts it paired, what the layout's trying to get a visitor to do. So if something feels off, you know what to push back on.\n\nIt also gives you two other versions of the page to compare, so you're not stuck with the first pass. Once you've found the one you want, it can generate a hosted website on B12 in the same colors.",
     "developerName": "B12",
     "category": "Creativity",
     "capabilities": ["Read", "Write"],

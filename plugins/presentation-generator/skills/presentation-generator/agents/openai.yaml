@@ -1,0 +1,8 @@
+interface:
+  display_name: "Presentation Generator"
+  short_description: "Slide decks, ready to present"
+  brand_color: "#4B22E8"
+  default_prompt: "Build a deck for:"
+
+policy:
+  allow_implicit_invocation: true

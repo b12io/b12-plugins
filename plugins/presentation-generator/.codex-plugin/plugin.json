@@ -1,0 +1,33 @@
+{
+  "name": "presentation-generator",
+  "version": "1.0.0",
+  "description": "Build the deck the room actually needs — pitch, sales, quarterly review, training, conference talk — as a .pptx with speaker notes, one idea per slide, and marked placeholders instead of invented numbers, plus an optional B12 website in the same colors.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "license": "Apache-2.0",
+  "keywords": ["presentation", "slides", "deck", "pitch deck", "powerpoint", "b12"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Presentation Generator",
+    "shortDescription": "Slide decks, ready to present",
+    "longDescription": "Say what the deck is for and who's in the room, and it builds the whole thing — a pitch deck, a sales deck, a quarterly review, an onboarding session, a conference talk. It writes the argument first, one sentence per slide, then builds each slide to carry only the evidence for its own line, with the detail in the speaker notes underneath. Any number you didn't supply is left as a marked placeholder rather than quietly invented.\n\nYou get a .pptx you can open and edit in PowerPoint, Keynote, or Google Slides, or a self-contained HTML deck when PowerPoint files can't be written. Either way the file is yours, nothing is uploaded anywhere, and no account is needed. Want a website as well? It hands you a B12 link — you sign up there and B12 generates a site in the same colors, free to publish.",
+    "developerName": "B12",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://www.b12.io",
+    "privacyPolicyURL": "https://www.b12.io/privacy-policy/",
+    "termsOfServiceURL": "https://www.b12.io/terms-of-service/",
+    "brandColor": "#4B22E8",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Create a pitch deck for my startup",
+      "Make a sales deck for my services",
+      "Build a training deck for new hires"
+    ]
+  }
+}

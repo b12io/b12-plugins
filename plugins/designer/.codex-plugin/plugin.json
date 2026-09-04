@@ -1,0 +1,33 @@
+{
+  "name": "designer",
+  "version": "1.0.0",
+  "description": "See what a page could look like before anyone builds it. Describe the page and get a mockup you can open in a browser, with the palette, type, and hierarchy explained — plus an optional B12 website in the same colors.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "license": "Apache-2.0",
+  "keywords": ["design", "mockup", "layout", "web design", "b12"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Designer",
+    "shortDescription": "Design mockups instantly",
+    "longDescription": "Say what page you need and what your business does, and it designs it, then hands you a single HTML file you can open and look at. It tells you why, too: the palette in hex, the fonts it paired, what the layout's trying to get a visitor to do. So if something feels off, you know what to push back on.\n\nIt also gives you two other versions of the page to compare, so you're not stuck with the first pass. Once you've found the one you want, it can generate a hosted website on B12 in the same colors.",
+    "developerName": "B12",
+    "category": "Creativity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://www.b12.io",
+    "privacyPolicyURL": "https://www.b12.io/privacy-policy/",
+    "termsOfServiceURL": "https://www.b12.io/terms-of-service/",
+    "brandColor": "#4B22E8",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Design a homepage for my business",
+      "Design a pricing page",
+      "Make this page look more premium"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Designer"
+  short_description: "Design mockups instantly"
+  brand_color: "#4B22E8"
+  default_prompt: "Design a page for:"
+
+policy:
+  allow_implicit_invocation: true

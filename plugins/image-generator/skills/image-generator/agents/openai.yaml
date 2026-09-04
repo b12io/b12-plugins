@@ -1,0 +1,8 @@
+interface:
+  display_name: "Image Generator"
+  short_description: "Website images, ready to use"
+  brand_color: "#4B22E8"
+  default_prompt: "Create an image for:"
+
+policy:
+  allow_implicit_invocation: true

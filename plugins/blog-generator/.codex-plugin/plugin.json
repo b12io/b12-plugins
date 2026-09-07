@@ -1,6 +1,6 @@
 {
   "name": "blog-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a blog website in minutes with B12. Describe who your blog is for and what it covers, and get a ready-to-publish blog site.",
   "author": {
     "name": "B12.io",

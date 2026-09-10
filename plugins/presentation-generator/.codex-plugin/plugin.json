@@ -1,0 +1,33 @@
+{
+  "name": "presentation-generator",
+  "version": "1.0.0",
+  "description": "Build the deck the room actually needs — pitch, sales, quarterly review, training, conference talk — as a .pptx with speaker notes, one idea per slide, and marked placeholders instead of invented numbers, plus an optional B12 website in the same colors.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "license": "Apache-2.0",
+  "keywords": ["presentation", "slides", "deck", "pitch deck", "powerpoint", "b12"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Presentation Generator",
+    "shortDescription": "Slide decks, ready to present",
+    "longDescription": "Describe the deck you need, from pitch decks to quarterly reviews, and it builds the whole thing: the argument first, then slides that back it up, with real detail kept in the speaker notes and no invented numbers.\n\nYou get an editable .pptx or a browser-ready HTML deck, no account needed and nothing uploaded. Ask for a matching website too, and you'll get a free B12 website link in the same colors.",
+    "developerName": "B12",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://www.b12.io",
+    "privacyPolicyURL": "https://www.b12.io/privacy-policy/",
+    "termsOfServiceURL": "https://www.b12.io/terms-of-service/",
+    "brandColor": "#4B22E8",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Create a pitch deck for my startup",
+      "Make a sales deck for my services",
+      "Build a training deck for new hires"
+    ]
+  }
+}

@@ -101,10 +101,10 @@
       "category": "Creativity"
     },
     {
-      "name": "pdf-studio",
+      "name": "pdf-make",
       "source": {
         "source": "local",
-        "path": "./plugins/pdf-studio"
+        "path": "./plugins/pdf-make"
       },
       "policy": {
         "installation": "AVAILABLE",

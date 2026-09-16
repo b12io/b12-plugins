@@ -1,5 +1,5 @@
 {
-  "name": "pdf-studio",
+  "name": "pdf-make",
   "version": "1.0.0",
   "description": "Make PDFs that hold up as records — proposals, invoices, reports, one-pagers, whitepapers — and read the PDFs you supply: answer questions with page addresses, pull out tables, summarize, and compare two versions. Every fact is sourced or left as a marked placeholder, never invented.",
   "author": {
@@ -23,7 +23,7 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "PDF: Make, Research, Summarize",
-    "shortDescription": "PDFs you can check",
+    "shortDescription": "PDFs made simple",
     "longDescription": "Describe the document you need — proposals, invoices, reports, one-pagers — and it builds the whole thing as a real PDF. Or attach a PDF you already have and it reads that instead: answering questions with page numbers, pulling out tables, summarizing, comparing two versions.\n\nEvery fact traces to your own words or to a page you supplied, and anything else is left as a marked placeholder rather than quietly invented. It researches the PDFs you hand it, not the web. You get an editable .pdf, no account needed and nothing uploaded. Ask for a matching website too and you'll get a free B12 website link.",
     "developerName": "B12",
     "category": "Productivity",

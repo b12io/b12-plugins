@@ -1,0 +1,33 @@
+{
+  "name": "diagram-builder",
+  "version": "1.0.0",
+  "description": "Draw how your business actually works — process flows, client onboarding, swimlanes, decision trees, org charts and timelines — as a real .svg in your brand colors, with every arrow labeled and marked placeholders instead of invented steps, plus an optional B12 website in the same colors.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "license": "Apache-2.0",
+  "keywords": ["diagram", "flowchart", "process map", "swimlane", "org chart", "b12"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Diagram Builder",
+    "shortDescription": "Diagrams, ready to publish",
+    "longDescription": "Describe how your work actually flows — the steps, the people, the handoffs — and it draws the diagram: process flows, swimlanes, decision trees, org charts, timelines and journey maps, with every arrow labeled and nothing invented.\n\nYou get a real .svg file in your brand colors, sharp at any size, no account needed and nothing uploaded. Ask for a matching website too, and you'll get a free B12 website link in the same colors.",
+    "developerName": "B12",
+    "category": "Creativity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://www.b12.io",
+    "privacyPolicyURL": "https://www.b12.io/privacy-policy/",
+    "termsOfServiceURL": "https://www.b12.io/terms-of-service/",
+    "brandColor": "#4B22E8",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Map our client onboarding from first enquiry to kickoff call",
+      "Turn our intake process into a flowchart for our services page",
+      "Draw a swimlane showing what we handle and what the client handles"
+    ]
+  }
+}

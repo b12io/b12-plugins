@@ -87,6 +87,18 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
+    },
+    {
+      "name": "diagram-builder",
+      "source": {
+        "source": "local",
+        "path": "./plugins/diagram-builder"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Creativity"
     }
   ]
 }

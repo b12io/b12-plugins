@@ -1,0 +1,8 @@
+interface:
+  display_name: "Diagram Builder"
+  short_description: "Diagrams, ready to publish"
+  brand_color: "#4B22E8"
+  default_prompt: "Draw a diagram of:"
+
+policy:
+  allow_implicit_invocation: true

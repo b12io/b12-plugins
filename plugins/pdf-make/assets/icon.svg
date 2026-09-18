@@ -1,0 +1,13 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M848 0H176C78.7979 0 0 78.7979 0 176V848C0 945.202 78.7979 1024 176 1024H848C945.202 1024 1024 945.202 1024 848V176C1024 78.7979 945.202 0 848 0Z" fill="#4B22E8"/>
+<path d="M263 190H570L761 381V834H263V190Z" stroke="white" stroke-width="56" stroke-linejoin="round"/>
+<path d="M562 202V389H749" stroke="white" stroke-width="56" stroke-linejoin="round"/>
+<g transform="translate(354.1,512.0)" stroke="white" stroke-width="28" fill="none" stroke-linecap="butt" stroke-linejoin="round">
+<path d="M14.0 152.0V14.0H50.2A30.1 30.1 0 0 1 80.2 44.1V44.1A30.1 30.1 0 0 1 50.2 74.2H14.0"/>
+<path d="M123.2 152.0V14.0H150.0A51.7 51.7 0 0 1 201.6 65.7V86.3A51.7 51.7 0 0 1 150.0 138.0H123.2"/>
+<path d="M244.6 152.0V14.0H315.8"/>
+<path d="M244.6 76.0H300.6"/>
+</g>
+<rect x="655" y="624" width="240" height="240" rx="120" fill="#4B22E8"/>
+<path d="M775 654C784.474 696 811 728.667 865 744C811 759.333 784.474 792 775 834C765.526 792 739 759.333 685 744C739 728.667 765.526 696 775 654Z" fill="white"/>
+</svg>

@@ -22,7 +22,7 @@
   "interface": {
     "displayName": "Resume & Credentials",
     "shortDescription": "Proof you can do the work",
-    "longDescription": "Tell it what you have actually done — the work, the clients or employers, the outcomes — and it writes the document that proves it: a resume, a resume tailored to one job posting, or a capability statement for your business. Every bullet is tied to a real engagement, and tailoring re-orders what you have rather than inventing what you don't. Anything you didn't state is marked so you can fill it in, and credentials you didn't claim are simply left out.\n\nYou get a real .docx in your colors that opens in Word, Pages or Google Docs — fill in the amber placeholders by clicking and typing, then export a PDF when you're ready to send it. No account needed and nothing uploaded. Ask for a matching website too, and you'll get a free B12 website link in the same colors.",
+    "longDescription": "Tell it what you have actually done — the work, the clients or employers, the outcomes — and it writes the document that proves it: a resume, a resume tailored to one job posting, or a capability statement for your business. Every bullet is tied to a real engagement, and tailoring re-orders what you have rather than inventing what you don't. Anything you didn't state is marked so you can fill it in, and credentials you didn't claim are simply left out.\n\nYou get a real .docx in your colors that opens in Word, Pages or Google Docs — fill in the amber placeholders by clicking and typing, then export a PDF when you're ready to send it. No account needed and nothing uploaded. It can also give you a link to start a B12 website in the same colors.",
     "developerName": "B12",
     "category": "Business & Operations",
     "capabilities": [
@@ -30,6 +30,7 @@
       "Write"
     ],
     "websiteURL": "https://www.b12.io",
+    "supportURL": "https://www.b12.io/contact-us/",
     "privacyPolicyURL": "https://www.b12.io/privacy-policy/",
     "termsOfServiceURL": "https://www.b12.io/terms-of-service/",
     "brandColor": "#4B22E8",

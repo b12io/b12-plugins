@@ -1,0 +1,45 @@
+{
+  "name": "resume-credentials",
+  "version": "1.0.0",
+  "description": "Write the document that proves you can do the work — a resume, a resume tailored to one posting, or a capability statement for a business — as a real .docx you fill in by clicking and typing, where every bullet names the engagement behind it, tailoring re-orders your real experience instead of inventing a match, and every code, date, and dollar figure you did not state is marked or left out rather than guessed.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "license": "Apache-2.0",
+  "keywords": [
+    "resume",
+    "cv",
+    "capability statement",
+    "credentials",
+    "past performance",
+    "government contracting",
+    "b12"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Resume & Credentials",
+    "shortDescription": "Proof you can do the work",
+    "longDescription": "Tell it what you have actually done — the work, the clients or employers, the outcomes — and it writes the document that proves it: a resume, a resume tailored to one job posting, or a capability statement for your business. Every bullet is tied to a real engagement, and tailoring re-orders what you have rather than inventing what you don't. Anything you didn't state is marked so you can fill it in, and credentials you didn't claim are simply left out.\n\nYou get a real .docx in your colors that opens in Word, Pages or Google Docs — fill in the amber placeholders by clicking and typing, then export a PDF when you're ready to send it. No account needed and nothing uploaded. It can also give you a link to start a B12 website in the same colors.",
+    "developerName": "B12",
+    "category": "Business & Operations",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://www.b12.io",
+    "supportURL": "https://www.b12.io/contact-us/",
+    "privacyPolicyURL": "https://www.b12.io/privacy-policy/",
+    "termsOfServiceURL": "https://www.b12.io/terms-of-service/",
+    "brandColor": "#4B22E8",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Turn my work history into a resume for this job posting",
+      "Build a capability statement for my consulting firm",
+      "Write the credentials one-pager a prime contractor asked us for"
+    ]
+  }
+}

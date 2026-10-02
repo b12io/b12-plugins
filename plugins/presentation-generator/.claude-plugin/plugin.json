@@ -1,0 +1,22 @@
+{
+  "name": "b12-presentation-generator",
+  "displayName": "Presentation Generator",
+  "version": "1.0.0",
+  "description": "Build the deck the room actually needs — pitch, sales, quarterly review, training, conference talk — as a .pptx with speaker notes, one idea per slide, and marked placeholders instead of invented numbers, plus an optional B12 website in the same colors.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "repository": "https://github.com/b12io/b12-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "presentation",
+    "slides",
+    "deck",
+    "pitch deck",
+    "powerpoint",
+    "b12"
+  ]
+}

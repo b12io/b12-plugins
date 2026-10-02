@@ -1,0 +1,22 @@
+{
+  "name": "b12-image-generator",
+  "displayName": "Image Generator",
+  "version": "1.0.0",
+  "description": "Generate the images a website needs, at the size each slot expects and as a set that matches. Hero and OG images, section and product shots, blog thumbnails and headshot placeholders — every file named, sized, and shipped with alt text, plus an optional B12 website to put them on.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "repository": "https://github.com/b12io/b12-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "images",
+    "photography",
+    "illustration",
+    "social",
+    "b12",
+    "website"
+  ]
+}

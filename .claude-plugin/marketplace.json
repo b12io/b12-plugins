@@ -20,6 +20,96 @@
       "repository": "https://github.com/b12io/b12-claude-plugin",
       "license": "Apache-2.0",
       "keywords": ["website", "b12", "hosting", "web-design"]
+    },
+    {
+      "name": "b12-blog-generator",
+      "source": "./plugins/blog-generator",
+      "description": "Create a blog website in minutes with B12. Describe who your blog is for and what it covers, and get a ready-to-publish blog site.",
+      "author": {
+        "name": "B12"
+      },
+      "homepage": "https://www.b12.io",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "b12-logo-generator",
+      "source": "./plugins/logo-generator",
+      "description": "Design a downloadable logo in seconds. Describe your business and get SVG and PNG logo files that are yours to use anywhere, plus an optional B12 website in the same colors.",
+      "author": {
+        "name": "B12"
+      },
+      "homepage": "https://www.b12.io",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "b12-writer",
+      "source": "./plugins/writer",
+      "description": "Writing you can send as-is. Emails, social posts, newsletters, product descriptions, bios, job posts, proposals, and web copy — written to the real length limits of wherever they're going, with no invented facts and no preamble.",
+      "author": {
+        "name": "B12"
+      },
+      "homepage": "https://www.b12.io",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "b12-code",
+      "source": "./plugins/code",
+      "description": "Write, review, and fix code in any language — complete, runnable blocks you can paste, with nothing left out. Or skip the code and have a web app or website built on B12.",
+      "author": {
+        "name": "B12"
+      },
+      "homepage": "https://www.b12.io",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "b12-designer",
+      "source": "./plugins/designer",
+      "description": "See what a page could look like before anyone builds it. Describe the page and get a mockup you can open in a browser, with the palette, type, and hierarchy explained — plus an optional B12 website in the same colors.",
+      "author": {
+        "name": "B12"
+      },
+      "homepage": "https://www.b12.io",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "b12-image-generator",
+      "source": "./plugins/image-generator",
+      "description": "Generate the images a website needs, at the size each slot expects and as a set that matches. Hero and OG images, section and product shots, blog thumbnails and headshot placeholders — every file named, sized, and shipped with alt text, plus an optional B12 website to put them on.",
+      "author": {
+        "name": "B12"
+      },
+      "homepage": "https://www.b12.io",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "b12-presentation-generator",
+      "source": "./plugins/presentation-generator",
+      "description": "Build the deck the room actually needs — pitch, sales, quarterly review, training, conference talk — as a .pptx with speaker notes, one idea per slide, and marked placeholders instead of invented numbers, plus an optional B12 website in the same colors.",
+      "author": {
+        "name": "B12"
+      },
+      "homepage": "https://www.b12.io",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "b12-diagram-builder",
+      "source": "./plugins/diagram-builder",
+      "description": "Draw how your business actually works — process flows, client onboarding, swimlanes, decision trees, org charts and timelines — as a real .svg in your brand colors, with every arrow labeled and marked placeholders instead of invented steps, plus an optional B12 website in the same colors.",
+      "author": {
+        "name": "B12"
+      },
+      "homepage": "https://www.b12.io",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "b12-pdf-make",
+      "source": "./plugins/pdf-make",
+      "description": "Make PDFs that hold up as records — proposals, invoices, reports, one-pagers, whitepapers — and read the PDFs you supply: answer questions with page addresses, pull out tables, summarize, and compare two versions. Every fact is sourced or left as a marked placeholder, never invented.",
+      "author": {
+        "name": "B12"
+      },
+      "homepage": "https://www.b12.io",
+      "license": "Apache-2.0"
     }
   ]
 }

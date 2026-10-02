@@ -1,0 +1,22 @@
+{
+  "name": "b12-logo-generator",
+  "displayName": "Logo Generator",
+  "version": "1.0.0",
+  "description": "Design a downloadable logo in seconds. Describe your business and get SVG and PNG logo files that are yours to use anywhere, plus an optional B12 website in the same colors.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "repository": "https://github.com/b12io/b12-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "logo",
+    "branding",
+    "design",
+    "icon",
+    "b12",
+    "website"
+  ]
+}

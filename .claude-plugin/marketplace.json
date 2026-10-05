@@ -72,16 +72,6 @@
       "license": "Apache-2.0"
     },
     {
-      "name": "b12-image-generator",
-      "source": "./plugins/image-generator",
-      "description": "Generate the images a website needs, at the size each slot expects and as a set that matches. Hero and OG images, section and product shots, blog thumbnails and headshot placeholders — every file named, sized, and shipped with alt text, plus an optional B12 website to put them on.",
-      "author": {
-        "name": "B12"
-      },
-      "homepage": "https://www.b12.io",
-      "license": "Apache-2.0"
-    },
-    {
       "name": "b12-presentation-generator",
       "source": "./plugins/presentation-generator",
       "description": "Build the deck the room actually needs — pitch, sales, quarterly review, training, conference talk — as a .pptx with speaker notes, one idea per slide, and marked placeholders instead of invented numbers, plus an optional B12 website in the same colors.",

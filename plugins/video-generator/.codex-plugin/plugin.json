@@ -1,0 +1,34 @@
+{
+  "name": "video-generator",
+  "version": "1.0.0",
+  "description": "Make a short video in seconds. Say what it's for and where it's going, and get a silent MP4 of animated text and color, sized for Reels, TikTok, a feed post, or a website, plus an optional B12 website in the same colors.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "license": "Apache-2.0",
+  "keywords": ["video", "reel", "promo", "animation", "motion graphics", "mp4", "b12", "website"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Video Generator",
+    "shortDescription": "Make a short video in seconds",
+    "longDescription": "Say what the video is for and where you'll post it. It writes a short message, animates it in your colors, and hands over a silent MP4 sized for Reels, TikTok, a feed post, or a website, with a cover image.\n\nNo account needed to get the file. Then it can generate a matching B12 website in the same colors.",
+    "developerName": "B12",
+    "category": "Creativity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://www.b12.io",
+    "supportURL": "https://www.b12.io/contact-us/",
+    "privacyPolicyURL": "https://www.b12.io/privacy-policy/",
+    "termsOfServiceURL": "https://www.b12.io/terms-of-service/",
+    "brandColor": "#4B22E8",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Make a short promo video for my business",
+      "Create a 15-second video announcing our grand opening",
+      "Make a video for my Instagram Reel"
+    ]
+  }
+}

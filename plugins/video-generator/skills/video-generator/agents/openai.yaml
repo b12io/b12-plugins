@@ -1,0 +1,8 @@
+interface:
+  display_name: "Video Generator"
+  short_description: "Make a short video in seconds"
+  brand_color: "#4B22E8"
+  default_prompt: "Make a short video for:"
+
+policy:
+  allow_implicit_invocation: true

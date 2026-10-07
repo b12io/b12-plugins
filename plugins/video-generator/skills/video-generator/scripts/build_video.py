@@ -94,6 +94,9 @@ FPS = 30
 ENTER, EXIT, FINAL_HOLD = 0.5, 0.25, 1.0
 WIPE, WIPE_DELAY = 0.45, 0.35   # panel colour change; text waits for it
 FLASH = 2 / FPS                 # kinetic's cut flash; text waits for it
+SCRIM = (12, 12, 14)            # the darkening laid over a photo behind light text
+KEN_BURNS = 0.08                # how far an image zooms across its beat
+MIN_IMAGE_SIDE = 512
 
 
 def fail(msg):
@@ -223,6 +226,17 @@ def load_sheet(raw):
         if emph and tone == "accent" and look != "blocks":
             fail(f"beat {n} sets emphasis on an accent beat - the accent colour would vanish "
                  f"into the panel. Use a base beat, or drop the emphasis")
+        image = b.get("image")
+        if image:
+            image = os.path.abspath(os.path.expanduser(str(image)))
+            if not os.path.isfile(image):
+                fail(f"beat {n} image not found: {image}")
+            if b.get("tone", "base") == "accent":
+                fail(f"beat {n} has an image, so it cannot also be an accent beat - drop the tone")
+            if emph and look != "blocks":
+                fail(f"beat {n} sets emphasis over an image - the accent colour cannot be "
+                     f"guaranteed to read on a photo. Move the emphasis to a beat without an image")
+            tone = "image"
         dur = max(1.6, 0.9 + 0.32 * (words(text) + words(kicker)))
         if n == len(beats):
             dur += FINAL_HOLD
@@ -232,24 +246,32 @@ def load_sheet(raw):
             # The last beat has no exit, so only its entrance changes.
             dur += ENTER * (f - 1) + (EXIT * (f - 1) if n < len(beats) else 0.0)
         out.append({"n": n, "text": text, "kicker": kicker, "motion": motion,
-                    "tone": tone, "emphasis": emph, "dur": dur})
+                    "tone": tone, "emphasis": emph, "dur": dur, "image": image or None})
 
-    t, prev_tone = 0.0, out[0]["tone"]
+    # What fills the frame behind a beat: a colour panel, or one particular image.
+    for b in out:
+        b["ground"] = ("image", b["image"]) if b["image"] else ("tone", b["tone"])
+    t, prev_tone = 0.0, out[0]["ground"]
     for k, b in enumerate(out):
         # The text waits for the transition into its beat, and the beat grows
         # by that wait so reading time is never eaten by the transition.
         if look == "kinetic":
             b["delay"] = round(FLASH, 3) if k else 0.0
         else:
-            b["delay"] = WIPE_DELAY * f if b["tone"] != prev_tone else 0.0
+            b["delay"] = WIPE_DELAY * f if b["ground"] != prev_tone else 0.0
         if f == 1.0:
             b["dur"] = round(b["dur"] + b["delay"], 2)
         else:
             # Round up once, so a pace change can never shave reading time.
             b["dur"] = math.ceil(round((b["dur"] + b["delay"]) * 100, 6)) / 100
-        prev_tone = b["tone"]
+        prev_tone = b["ground"]
         b["start"] = round(t, 3)
         t += b["dur"]
+        if b["tone"] == "image":
+            # Light text over a darkening scrim the renderer sizes to the photo.
+            b["fg"] = next((c for c in (bg, ink) if luminance(c) > 0.6), (255, 255, 255))
+            b["panel"] = SCRIM if luminance(ink) > 0.05 else mix(ink, (0, 0, 0), 0.4)
+            continue
         panel = accent if b["tone"] == "accent" else bg
         b["panel"] = panel
         b["fg"] = ink if b["tone"] == "base" else text_on(accent, [bg, ink])
@@ -559,9 +581,10 @@ def soft_circle(Image, ImageDraw, r):
 class Renderer:
     """Shared timeline, motion and compositing. A Look draws what is particular to it."""
 
-    def __init__(self, spec, scale, Image, ImageDraw, ImageFont):
+    def __init__(self, spec, scale, Image, ImageDraw, ImageFont, still_photos=False):
         self.Image, self.ImageDraw = Image, ImageDraw
         self.spec = spec
+        self.still_photos = still_photos
         self.w = int(spec["w"] * scale) // 2 * 2
         self.h = int(spec["h"] * scale) // 2 * 2
         f = spec["f"]
@@ -707,6 +730,113 @@ class Look:
             em = split_emphasis(self.Image, lay, b["emphasis"])
             if em is not None:
                 lay["layers"].append(("text", em, self.spec["accent"]))
+        self.prepare_photos()
+
+    # Text sits on a card in blocks, so only the other looks need a scrim behind it.
+    needs_scrim = True
+
+    def prepare_photos(self):
+        """Cover-crop every image beat once, and size the scrim that keeps its text readable."""
+        from PIL import ImageFilter
+        Image, w, h = self.Image, self.w, self.h
+        self.photos, self.scrims = {}, {}
+        for i, b in enumerate(self.spec["beats"]):
+            if not b["image"]:
+                continue
+            try:
+                src = Image.open(b["image"])
+                src.load()
+                src = src.convert("RGB")
+            except Exception as e:
+                raise RuntimeError(f"beat {b['n']} image could not be read: {e}")
+            if min(src.size) < MIN_IMAGE_SIDE:
+                fail(f"beat {b['n']} image is {src.width}x{src.height} - at least "
+                     f"{MIN_IMAGE_SIDE}px on the short side is needed")
+            # 10% margin all round leaves room for the slow zoom and pan.
+            bw, bh = int(w * 1.1), int(h * 1.1)
+            k = max(bw / src.width, bh / src.height)
+            full_k = max(self.spec["w"] * 1.1 / src.width, self.spec["h"] * 1.1 / src.height)
+            if full_k > 1.6:
+                note = (f"beat {b['n']} image is {src.width}x{src.height}, enlarged "
+                        f"{full_k:.1f}x for this size - it may look soft")
+                if note not in self.r.notes:
+                    self.r.notes.append(note)
+            rw, rh = max(int(math.ceil(src.width * k)), bw), max(int(math.ceil(src.height * k)), bh)
+            big = src.resize((rw, rh), Image.LANCZOS)
+            base = big.crop(((rw - bw) // 2, (rh - bh) // 2, (rw - bw) // 2 + bw, (rh - bh) // 2 + bh))
+            self.photos[i] = {"base": base, "mask": None}
+            self.photos[i]["mask"], self.scrims[i] = self.scrim_mask(i, ImageFilter)
+
+    def text_region(self, i):
+        """Everything the beat draws as text, padded for how far its entrance moves it."""
+        lay, w, h = self.layouts[i], self.w, self.h
+        x0, y0, x1, y1 = lay["block"]
+        if "bar" in lay:
+            x0, y0 = min(x0, lay["bar"][0]), min(y0, lay["bar"][1])
+            x1, y1 = max(x1, lay["bar"][2]), max(y1, lay["bar"][3])
+        if lay.get("kicker_box"):
+            y0 = min(y0, lay["kicker_box"][1])
+        mx, my = int(w * 0.07), int(h * 0.06)
+        return (max(x0 - mx, 0), max(y0 - my, 0), min(x1 + mx, w), min(y1 + my, h))
+
+    def scrim_mask(self, i, ImageFilter):
+        """Darken just enough that light text clears 4.5:1 on the brightest 1% of the photo."""
+        Image, w, h = self.Image, self.w, self.h
+        b = self.spec["beats"][i]
+        veil = 0.18
+        if not self.needs_scrim:
+            return Image.new("L", (w, h), int(255 * 0.1)), 0.1
+        region = self.text_region(i)
+        worst = 0.0
+        for e in (0.0, 0.25, 0.5, 0.75, 1.0):
+            # Full resolution: shrinking first averages away small highlights like a flame.
+            # Each channel's 99.5th percentile, combined, is at least as bright as the real pixel.
+            frame = self.photo(i, None, e=e, scrim=False).crop(region)
+            hist, total = frame.histogram(), frame.width * frame.height
+            bright = []
+            for c in range(3):
+                counts, seen = hist[c * 256:(c + 1) * 256], 0
+                for v in range(255, -1, -1):
+                    seen += counts[v]
+                    if seen > total * 0.005:
+                        break
+                bright.append(v)
+            bright = tuple(bright)
+            a = 0.0
+            while a < 0.95 and contrast(b["fg"], mix(bright, b["panel"], a)) < 4.6:
+                a += 0.01
+            worst = max(worst, a)
+        band = min(worst + 0.03, 0.95)
+        base = max(veil, band * 0.45)
+        mask = Image.new("L", (w, h), int(255 * base))
+        r = max(int(min(w, h) * 0.04), 2)
+        x0, y0, x1, y1 = region
+        mask.paste(int(255 * band), (x0 - 3 * r, y0 - 3 * r, x1 + 3 * r, y1 + 3 * r))
+        mask = mask.filter(ImageFilter.GaussianBlur(r))
+        # The blur softens the edge; the text region itself always gets the full band.
+        mask.paste(int(math.ceil(255 * band)), region)
+        return mask, round(band, 2)
+
+    def photo(self, i, now, e=None, scrim=True):
+        """An image beat's frame: the photo drifting slowly in, under its scrim."""
+        b, w, h = self.spec["beats"][i], self.w, self.h
+        ph = self.photos[i]
+        if e is None:
+            # A GIF cannot compress a moving photo, so its rung holds photos still.
+            e = 0.5 if self.r.still_photos else ease_in_out((now - b["start"]) / b["dur"])
+        z = 1 + KEN_BURNS * (e if i % 2 == 0 else 1 - e)
+        pan = w * 0.03 * (e - 0.5) * (1 if i % 2 == 0 else -1)
+        cx, cy = ph["base"].width / 2 + pan, ph["base"].height / 2
+        im = ph["base"].transform((w, h), self.Image.AFFINE,
+                                  (1 / z, 0, cx - w / (2 * z), 0, 1 / z, cy - h / (2 * z)),
+                                  resample=self.Image.BILINEAR)
+        if scrim:
+            im.paste(b["panel"], (0, 0), ph["mask"])
+        return im
+
+    def ground(self, i, now):
+        """What fills the frame behind beat i: its photo, or the look's own panel."""
+        return self.photo(i, now) if self.spec["beats"][i]["image"] else self.panel(i, now)
 
     def under(self, im, i, local, out):
         pass
@@ -717,10 +847,10 @@ class Look:
     def wiped(self, i, local, now, horizontal=None):
         """The beat's background, with a colour change wiping in over the previous one."""
         beats, w, h = self.spec["beats"], self.w, self.h
-        im = self.panel(i, now)
-        if i and beats[i - 1]["panel"] != beats[i]["panel"] and local < self.r.wipe:
+        im = self.ground(i, now)
+        if i and beats[i - 1]["ground"] != beats[i]["ground"] and local < self.r.wipe:
             p = ease_in_out(local / self.r.wipe)
-            old = self.panel(i - 1, now)
+            old = self.ground(i - 1, now)
             if (h > w) if horizontal is None else not horizontal:
                 edge = int(h * (1 - p))
                 old.paste(im.crop((0, edge, w, h)), (0, edge))
@@ -822,7 +952,7 @@ class Kinetic(Look):
         if i and local < FLASH:
             flash = self.spec["accent"] if beat["panel"] != self.spec["accent"] else self.spec["bg"]
             return self.Image.new("RGB", (self.w, self.h), flash)
-        return self.panel(i, now)
+        return self.ground(i, now)
 
     def under(self, im, i, local, out):
         beat, lay = self.spec["beats"][i], self.layouts[i]
@@ -870,10 +1000,19 @@ class Editorial(Look):
 
     def background(self, i, local, now):
         beats = self.spec["beats"]
-        im = self.panel(i, now)
-        if i and beats[i - 1]["panel"] != beats[i]["panel"] and local < self.r.wipe:
+        im = self.ground(i, now)
+        if i and beats[i - 1]["ground"] != beats[i]["ground"] and local < self.r.wipe:
             p = ease_in_out(local / self.r.wipe)
-            im = self.Image.blend(self.panel(i - 1, now), im, p)
+            im = self.Image.blend(self.ground(i - 1, now), im, p)
+        return im
+
+    def ground(self, i, now):
+        im = super().ground(i, now)
+        beat = self.spec["beats"][i]
+        if beat["image"]:
+            m, t = self.inset, self.hair
+            self.ImageDraw.Draw(im).rectangle((m, m, self.w - m - 1, self.h - m - 1),
+                                              outline=mix(beat["panel"], beat["fg"], 0.45), width=t)
         return im
 
 
@@ -911,13 +1050,17 @@ class Blocks(Look):
         sm = self.Image.new("L", (w, h), 0)
         self.ImageDraw.Draw(sm).rectangle((x0, card[1], x0 + strip, card[3]), fill=255)
         lay["block"] = (x0, card[1], card[2], card[3])
-        strip_col = self.spec["accent"] if beat["tone"] == "base" else self.spec["ink"]
+        strip_col = self.spec["accent"] if beat["tone"] != "accent" else self.spec["ink"]
         lay["layers"] = [("shape", cm, self.spec["bg"]), ("shape", sm, strip_col),
                          ("text", lay["mask"], self.spec["ink"])]
         return lay
 
+    needs_scrim = False
+
     def colours(self, beat):
         a, bg, ink, p = self.spec["accent"], self.spec["bg"], self.spec["ink"], beat["panel"]
+        if beat["tone"] == "image":
+            return {"a": a, "m": bg, "s": mix(bg, a, 0.35)}
         if beat["tone"] == "base":
             return {"a": a, "m": mix(a, p, 0.55), "s": mix(ink, p, 0.82)}
         return {"a": mix(bg, p, 0.3), "m": mix(bg, p, 0.6), "s": mix(ink, p, 0.7)}
@@ -1017,9 +1160,20 @@ def encode_gif(r, path):
     step = 2  # 15 fps
     frames = []
     n = int(round(r.spec["total"] * FPS))
-    for k in range(0, n, step):
-        frames.append(r.frame(k / FPS).quantize(colors=64, method=r.Image.Quantize.MEDIANCUT,
-                                                dither=r.Image.Dither.NONE))
+    if any(b["image"] for b in r.spec["beats"]):
+        # One palette for the whole GIF, built from every settled beat, so a still photo
+        # quantizes to the same pixels each frame and the GIF only stores what changed.
+        tiles = [r.frame(0, settle=i) for i in range(len(r.spec["beats"]))]
+        sheet = r.Image.new("RGB", (r.w, r.h * len(tiles)))
+        for k, t in enumerate(tiles):
+            sheet.paste(t, (0, k * r.h))
+        pal = sheet.quantize(colors=200, method=r.Image.Quantize.MEDIANCUT)
+        for k in range(0, n, step):
+            frames.append(r.frame(k / FPS).quantize(palette=pal, dither=r.Image.Dither.NONE))
+    else:
+        for k in range(0, n, step):
+            frames.append(r.frame(k / FPS).quantize(colors=64, method=r.Image.Quantize.MEDIANCUT,
+                                                    dither=r.Image.Dither.NONE))
     frames[0].save(path, save_all=True, append_images=frames[1:],
                    duration=int(1000 * step / FPS), loop=0, optimize=True, disposal=1)
 
@@ -1060,6 +1214,11 @@ def html_page(spec, stem):
                    "words": "transform:none;"}[b["motion"]]
         fg = spec["ink"] if look == "blocks" else b["fg"]
         deco = spec["accent"] if b["tone"] == "base" else b["fg"]
+        photo = ""
+        if b["image"]:
+            veil = "rgba(12,12,14,.6)" if look != "blocks" else "rgba(12,12,14,.1)"
+            photo = (f"#b{n}{{background:linear-gradient({veil},{veil}),"
+                     f"url('{b['html_image']}') center/cover}}")
         css.append(
             f"@keyframes b{n}{{0%,{p0:.3f}%{{opacity:0;{enter}}}"
             f"{pin:.3f}%{{opacity:1;{settled}}}{pout:.3f}%{{opacity:1;{settled}}}"
@@ -1068,7 +1227,7 @@ def html_page(spec, stem):
             f"animation:b{n} {total}s linear infinite}}"
             f"#b{n} i{{background:#{to_hex(deco)}}}"
             f"#b{n} .card{{border-color:#{to_hex(deco if b['tone'] == 'base' else spec['ink'])}}}"
-            f"#b{n} .frame{{border-color:#{to_hex(mix(b['panel'], b['fg'], 0.3))}}}")
+            f"#b{n} .frame{{border-color:#{to_hex(mix(b['panel'], b['fg'], 0.3))}}}" + photo)
         if b["n"] == len(spec["beats"]):
             css.append(f"@keyframes b{n}{{0%,{p0:.3f}%{{opacity:0;{enter}}}"
                        f"{pin:.3f}%,99.9%{{opacity:1;{settled}}}100%{{opacity:0}}}}")
@@ -1146,7 +1305,7 @@ def main(argv):
     stem = folder[:-6] if folder.endswith("-video") and len(folder) > 6 else folder
     os.makedirs(out_dir, exist_ok=True)
 
-    notes, fmt, font_name, fonts, written = [], None, None, None, []
+    notes, fmt, font_name, fonts, written, scrims = [], None, None, None, [], {}
     pil = None
     if force != "html":
         try:
@@ -1160,7 +1319,7 @@ def main(argv):
         if ffmpeg:
             try:
                 r = Renderer(spec, 1.0, *pil)
-                font_name, fonts = r.font_name, r.fonts
+                font_name, fonts, scrims = r.font_name, r.fonts, r.look.scrims
                 notes += r.notes
                 path = os.path.join(out_dir, f"{stem}.mp4")
                 encode_mp4(r, path, ffmpeg)
@@ -1177,12 +1336,14 @@ def main(argv):
 
     if fmt is None and pil and force in (None, "gif"):
         try:
-            r = Renderer(spec, 0.5, *pil)
+            r = Renderer(spec, 0.5, *pil, still_photos=True)
             font_name, fonts = r.font_name, r.fonts
             notes += [n for n in r.notes if n not in notes]
             path = os.path.join(out_dir, f"{stem}.gif")
             encode_gif(r, path)
             full = Renderer(spec, 1.0, *pil)
+            scrims = full.look.scrims
+            notes += [n for n in full.notes if n not in notes]
             stills(full, out_dir, pil[0])
             fmt = "gif"
             written = [path, os.path.join(out_dir, "poster.png"),
@@ -1193,11 +1354,19 @@ def main(argv):
                 fail("; ".join(notes))
 
     if fmt is None:
+        # The page references its images beside it, so they travel in the folder and the zip.
+        copies = []
+        for b in spec["beats"]:
+            if b["image"]:
+                name = f"scene-{b['n']}{os.path.splitext(b['image'])[1].lower()}"
+                shutil.copyfile(b["image"], os.path.join(out_dir, name))
+                b["html_image"] = name
+                copies.append(os.path.join(out_dir, name))
         path = os.path.join(out_dir, f"{stem}.html")
         with open(path, "w", encoding="utf-8") as f:
             f.write(html_page(spec, stem))
         fmt = "html"
-        written = [path]
+        written = [path] + copies
         fonts = {"text": "browser default for the look's font stack"}
         font_name = fonts["text"]
 
@@ -1220,16 +1389,19 @@ def main(argv):
     summary = {
         "format": fmt,
         "video": written[0],
-        "poster": written[1] if len(written) > 1 else None,
-        "storyboard": written[2] if len(written) > 2 else None,
+        "poster": next((p for p in written if p.endswith("poster.png")), None),
+        "storyboard": next((p for p in written if p.endswith("storyboard.png")), None),
         "zip": zip_path,
         "size": f"{spec['w']}x{spec['h']}" if fmt != "gif" else f"{spec['w'] // 2}x{spec['h'] // 2}",
         "aspect": spec["size"],
         "look": spec["look"],
         "pace": spec["pace"],
         "seconds": spec["total"],
-        "beats": [{"n": b["n"], "seconds": b["dur"], "text": b["text"], "motion": b["motion"]}
-                  for b in spec["beats"]],
+        "beats": [dict({"n": b["n"], "seconds": b["dur"], "text": b["text"], "motion": b["motion"]},
+                       **({"image": os.path.basename(b["image"]), "scrim": scrims.get(k)}
+                          if b["image"] else {}))
+                  for k, b in enumerate(spec["beats"])],
+        "images": sum(1 for b in spec["beats"] if b["image"]),
         "colors": {"bg": to_hex(spec["bg"]), "ink": to_hex(spec["ink"]),
                    "accent": to_hex(spec["accent"])},
         "font": font_name,

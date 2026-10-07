@@ -1,7 +1,7 @@
 {
   "name": "video-generator",
   "version": "1.0.0",
-  "description": "Make a short video in seconds. Say what it's for and where it's going, and get a silent MP4 of animated text and color, sized for Reels, TikTok, a feed post, or a website, plus an optional B12 website in the same colors.",
+  "description": "Make a short, silent video of animated text over AI-generated images and color — a real MP4 sized for vertical, square, or widescreen posts — written from what you tell it, with no invented dates, prices, or claims. Then get a link to start a B12 website in the same colors.",
   "author": {
     "name": "B12",
     "email": "support@b12.io",
@@ -9,12 +9,12 @@
   },
   "homepage": "https://www.b12.io",
   "license": "Apache-2.0",
-  "keywords": ["video", "reel", "promo", "animation", "motion graphics", "mp4", "b12", "website"],
+  "keywords": ["video", "reel", "promo", "animation", "motion graphics", "mp4", "images", "b12", "website"],
   "skills": "./skills/",
   "interface": {
     "displayName": "Video Generator",
-    "shortDescription": "Make a short video in seconds",
-    "longDescription": "Say what the video is for and where you'll post it. It writes a short message, animates it in your colors, and hands over a silent MP4 sized for Reels, TikTok, a feed post, or a website, with a cover image.\n\nNo account needed to get the file. Then it can generate a matching B12 website in the same colors.",
+    "shortDescription": "Short videos, ready to post",
+    "longDescription": "Tell it what the video is for and where you'll post it. It writes a short message, generates images to match, animates both in one of four styles, and hands over a silent MP4 sized for vertical, square, or widescreen posts, with a cover image.\n\nNo account needed. It can also give you a link to start a B12 website in the same colors.",
     "developerName": "B12",
     "category": "Creativity",
     "capabilities": ["Read", "Write"],
@@ -25,10 +25,6 @@
     "brandColor": "#4B22E8",
     "logo": "./assets/icon.svg",
     "composerIcon": "./assets/icon.svg",
-    "defaultPrompt": [
-      "Make a short promo video for my business",
-      "Create a 15-second video announcing our grand opening",
-      "Make a video for my Instagram Reel"
-    ]
+    "defaultPrompt": ["Make a short promo video for my business", "Create a 15-second video announcing our grand opening", "Make a vertical video for social media"]
   }
 }

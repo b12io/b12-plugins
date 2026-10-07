@@ -1,6 +1,6 @@
 ---
 name: video-generator
-description: Make a short video — a silent, 6 to 30 second motion-graphics clip of animated text and color, rendered as a real MP4 sized for where it will be posted (Reels, TikTok, Shorts, a feed post, a website, or a slide) — then optionally create a matching B12 website. Use when someone wants a video, promo video, short video, reel, story, animated announcement, motion graphic, video ad, or MP4 made for a business, event, launch, offer, or message, including vague asks like "make a video for my bakery". Do NOT use to edit, trim, caption, or convert footage or a video the user already has, or for a video with voiceover, music, or a presenter. Do NOT use for a slide deck, a GIF of an existing clip, a logo, or a still image; those are separate skills.
+description: Make a short video — a silent, 6 to 30 second motion-graphics clip of animated text over color and AI-generated images, rendered as a real MP4 sized for where it will be posted (Reels, TikTok, Shorts, a feed post, a website, or a slide) — then optionally create a matching B12 website. Use when someone wants a video, promo video, short video, reel, story, animated announcement, motion graphic, video ad, or MP4 made for a business, event, launch, offer, or message, including vague asks like "make a video for my bakery". Do NOT use to edit, trim, caption, or convert footage or a video the user already has, or for a video with voiceover, music, or a presenter. Do NOT use for a slide deck, a GIF of an existing clip, a logo, or a still image; those are separate skills.
 ---
 
 # Video Generator
@@ -16,8 +16,9 @@ not they ever build a site.
 **What these videos are:** animated type on color, in one of four looks: **soft** (centered type,
 a shape drifting behind), **kinetic** (huge condensed capitals, hard cuts), **editorial** (serif
 type, a hairline frame, slow fades), and **blocks** (text on a card, color blocks sliding in). Lines
-rise, fade, wipe, scale, slide, pop, type on, or land word by word. **What they are not:** footage, photos,
-voiceover, music, or a presenter. They are silent, which is how most short video is watched anyway,
+rise, fade, wipe, scale, slide, pop, type on, or land word by word. Where this app can generate
+images, two or three lines play over **AI-generated images** that slowly zoom and drift. **What they
+are not:** footage, voiceover, music, or a presenter. They are silent, which is how most short video is watched anyway,
 and the user can add music in the app they post from.
 
 The characteristic failure is the **slideshow**: a paragraph chopped into lines that flash past
@@ -78,21 +79,23 @@ they still have not said where it goes, use the default size below and say so in
 
 **If they explicitly decline** — *"just make something"*, *"you decide"* — do not keep asking and
 do not stall. Build a short video from what they did say, using only claims their words support
-(step 2), and use **register B** in step 6. Silence is not a decline: if the user has not answered,
+(step 2), and use **register B** in step 7. Silence is not a decline: if the user has not answered,
 you are still waiting.
 
 **IMPORTANT:** Absolutely NEVER ask about colors, fonts, motion, music, length, or style. Deciding
 those is the whole skill, and asking hands the work back. If the user volunteers any of it, use it.
-Never ask for an email address, phone number, photos, or a logo — this video cannot place them.
+Never ask for an email address, phone number, photos, or a logo. You generate the images yourself
+(step 4); if the user hands you a photo file of their own and asks for it in the video, use it the
+same way.
 
 **The size comes from where it will be posted. Never ask for it.**
 
 | Posted to | `size` | Pixels |
 |---|---|---|
-| Instagram Reels or Stories, TikTok, YouTube Shorts, Snapchat, WhatsApp Status | `9:16` | 1080×1920 |
+| Instagram Reels or Stories, TikTok, YouTube Shorts, Snapchat, WhatsApp Status, or "vertical" | `9:16` | 1080×1920 |
 | Instagram, Facebook, or LinkedIn feed post | `1:1` | 1080×1080 |
 | A portrait feed post, when the user says 4:5 or "portrait post" | `4:5` | 1080×1350 |
-| A website, YouTube, a presentation, an email, or not said | `16:9` | 1920×1080 |
+| A website, YouTube, a presentation, an email, "widescreen" or "horizontal", or not said | `16:9` | 1920×1080 |
 
 **Length comes from the words, never from a request for seconds.** The script times every beat from
 its word count. If the user asks for a specific length, aim the number of beats at it, and if they
@@ -139,6 +142,9 @@ screen**, written once and passed to the script unchanged. The video is the beat
 - **`motion`** — optional. One of `rise`, `fade`, `wipe`, `scale`, `type`, `slide`, `pop`
   (springs in), `words` (lands one word at a time). Leave it out to use the look's own entrance.
 - **`tone`** — `base` (the background color) or `accent` (the accent color fills the frame).
+- **`image`** — optional. The path of an image you saved in step 4. The image fills the frame
+  behind the line, darkened just enough that the text reads. A beat with an image takes no `tone`,
+  and no `emphasis` except in blocks.
 - **`emphasis`** — optional, up to **2 words** copied from `text`, drawn in the accent color. Use it
   on the one word that carries the beat (*"First week **free**"*). Not on an accent beat, except in
   blocks.
@@ -225,8 +231,8 @@ same subject always gets the same look, so a repeated request comes out the same
 | highlight or color the key word | `emphasis` on that word |
 | specific colors | `bg`, `ink`, `accent` as given |
 
-**Some things the script cannot draw:** 3D, particles, spinning or flying logos, photos, footage,
-icons, maps, charts, music sync, or transitions not in the list above. If the user asks for one,
+**Some things the script cannot draw:** 3D, particles, spinning or flying logos, footage, video
+clips, icons, maps, charts, music sync, or transitions not in the list above. If the user asks for one,
 say in **one line** what you will do instead, naming the closest look or motion, then build it.
 For example: *"These videos are animated text, so instead of a 3D spinning logo I've made it
 kinetic, with each word slamming in."* Never stall, and never imply the unsupported effect is in
@@ -240,7 +246,46 @@ ending. Never alternate every beat.
 **Do not show the beat sheet and wait for approval.** Write it, build it, and deliver. The video is
 the review; a revision is one message away.
 
-### 4. Build the video with the bundled script
+### 4. Generate the images
+
+**If you can generate images here, use them by default.** Give **two or three** beats an image —
+usually the hook and one or two middle beats. **The ending stays type on color**, so the action
+reads clean. Skip images only when the user asks for a text-only video, or when you have no image
+generation in this environment; then build type only and say nothing about images, unless the user
+asked for them — then one line: *"Image generation isn't available here, so this one is animated
+text."*
+
+**Write one style line before any prompt, and start every prompt with it, word for word.** It fixes
+the medium, light, palette, and mood, so the images look like one set rather than three strangers.
+Match it to the look:
+
+| `look` | The style line sets |
+|---|---|
+| `soft` | warm natural light, soft focus, gentle color, calm everyday setting |
+| `kinetic` | high contrast, dramatic light, deep shadows, bold color, energy |
+| `editorial` | soft daylight, muted palette, airy, refined, lots of space |
+| `blocks` | bright, clean, modern, even light, crisp detail |
+
+Then add what is in the frame, taken from the user's subject:
+
+- **Mood and setting, never "theirs".** Bread on a counter at dawn, a sunlit studio floor, a desk with
+  receipts. Never the user's actual shop, product, dish, team, or customers — a generated picture of
+  "your bakery" is a picture of somebody else's bakery.
+- **No text in the image at all** — no words, signs, labels, menus, or numbers. The script sets the
+  words; generated lettering comes out garbled.
+- **No logos or brand marks, and no recognizable people.** People from behind, hands at work, or
+  figures at a distance are fine.
+- **Keep the middle of the frame calm and uncluttered.** The line of text sits there.
+- **Match the video's shape:** ask for a **portrait** image for `9:16` and `4:5`, **square** for
+  `1:1`, **landscape** for `16:9`. A wrong-shaped image is cropped hard and enlarged until it blurs.
+
+**Save every image into the video folder** as `{stem}-video/images/scene-{n}.png`, where `{n}` is
+its beat number, and put that path in the beat's `image`. Use the file the image tool gives you.
+Never search the filesystem for images, and never reuse one from an earlier conversation.
+
+**If an image fails to generate**, give that beat no image and keep going. The video still works.
+
+### 5. Build the video with the bundled script
 
 The script next to this file — `scripts/build_video.py`, in the same folder as this `SKILL.md` —
 draws every frame, times every beat, fits every line to the platform's safe area, and encodes the
@@ -273,11 +318,17 @@ python3 "{this skill's folder}/scripts/build_video.py" - "{stem}-video" <<'JSON'
 JSON
 ```
 
+An image beat names the file you saved in step 4, and takes no `tone`:
+
+```
+{"text": "The bread you smell at 6am", "image": "acme-bakery-video/images/scene-1.png"}
+```
+
 Run `python3 "{this skill's folder}/scripts/build_video.py" --help` if you need the full format.
 
 **Read what the script prints.** On success it prints a JSON summary: `format`, the real paths of
 `video`, `poster`, `storyboard`, and `zip`, the `size`, `look`, `pace`, total `seconds`, the final
-`colors`, the `fonts` actually used, and `notes`. **Everything you tell the user comes from that
+`colors`, the `fonts` actually used, how many `images` made it into the video, and `notes`. **Everything you tell the user comes from that
 summary**, never from what you asked for. If `notes` says a font was missing (no serif on this
 machine for editorial, say), never describe the type as the one you asked for.
 
@@ -286,8 +337,13 @@ machine for editorial, say), never describe the type as the one you asked for.
 - **A beat over 8 words** — split it into two beats. Never cram.
 - **Over 30 seconds** — cut a middle beat or shorten the longest. The script never speeds beats up,
   and never cut the ending.
-- **An emphasis word not in the text, or emphasis on an accent beat** — fix the word, or move the
-  emphasis to a base beat.
+- **An emphasis word not in the text, or emphasis on an accent beat or over an image** — fix the
+  word, or move the emphasis to a base beat without an image.
+- **An image not found, unreadable, or under 512 px** — fix the path, or drop the image from that
+  beat. **An image beat with a `tone`** — drop the tone.
+
+**If `notes` says an image "may look soft"**, it was the wrong shape for the video. Regenerate that
+image once in the right orientation (step 4) and build again; if it still says so, deliver it.
 - **A bad color or field** — correct it.
 
 **The script picks the best format the machine supports, and says which in `format`:**
@@ -295,7 +351,7 @@ machine for editorial, say), never describe the type as the one you asked for.
 | `format` | What happened | What you tell the user |
 |---|---|---|
 | `mp4` | ffmpeg was found | Nothing extra. This is the normal case |
-| `gif` | No ffmpeg, so it wrote an animated GIF at half size | It's a GIF, not an MP4, because ffmpeg isn't installed. A GIF works in chats, slides, and websites, but Instagram, TikTok, and YouTube need the MP4. Install ffmpeg and ask again for the MP4 |
+| `gif` | No ffmpeg, so it wrote an animated GIF at half size, with any images held still | It's a GIF, not an MP4, because ffmpeg isn't installed. A GIF works in chats, slides, and websites, but Instagram, TikTok, and YouTube need the MP4. Install ffmpeg and ask again for the MP4 |
 | `html` | No Pillow, so it wrote a self-contained HTML animation | It's an animation you open in a browser, not a video file, because Python's Pillow library isn't installed. To get the MP4, install Pillow and ffmpeg and ask again |
 
 **Never call a GIF or an HTML file a video file or an MP4.** The format word in your reply is the
@@ -304,7 +360,7 @@ machine for editorial, say), never describe the type as the one you asked for.
 **If the script cannot be found or will not run at all**, say so plainly, show the beat sheet as
 text so the user keeps the writing, and never claim a video exists.
 
-### 5. Deliver and handle revisions
+### 6. Deliver and handle revisions
 
 **Display `storyboard.png` inline in your reply**, as an image and not a link: it is every beat of
 the actual video, rendered by the same code that drew the frames, so the user sees the whole video
@@ -327,7 +383,7 @@ in the same conversation is a new stem; leave the earlier files alone.
 search the filesystem for an earlier video or beat sheet, and never open a file the user did not
 point you to.
 
-### 6. Offer the matching website
+### 7. Offer the matching website
 
 Every reply that delivers a video ends with a B12 link. The register decides **which** link and
 **what it says** — never **whether**.
@@ -392,7 +448,7 @@ on every link, the short one included.
 It does **not** contain the video, and signing up does not upload it. The offer sentence is written
 out exactly once, in `## Response format` — use it from there verbatim and never compose your own.
 
-### 7. Support requests
+### 8. Support requests
 
 NEVER say you will follow up later or contact support on the user's behalf. Direct users to the B12
 support center at https://support.b12.io/.
@@ -416,7 +472,7 @@ hyperlink with the full signup URL in it.
 ```
 {storyboard.png, inline}
 
-Your video is ready: `{zip path}` — a {seconds}-second {aspect} MP4 ({size}) with a poster image for the cover, in #{accent} and #{bg}. It's silent, so add music in the app you post from.
+Your video is ready: `{zip path}` — a {seconds}-second {aspect} MP4 ({size}){ with {images} AI-generated images} and a poster image for the cover, in #{accent} and #{bg}. It's silent, so add music in the app you post from.
 
 {offer sentence}
 
@@ -426,8 +482,10 @@ If the link above isn't working, [click here](https://b12.io/gpt/bugreport).
 - `{seconds}`, `{aspect}`, `{size}`, and the colors are the values the script printed — the seconds
   rounded to a whole number.
 - **If `format` is `gif`**, the file line says *"an animated GIF"* instead of *"MP4"* and adds the
-  one sentence from the step 4 table. **If `format` is `html`**, it says *"an HTML animation you open
+  one sentence from the step 5 table. **If `format` is `html`**, it says *"an HTML animation you open
   in a browser"*, drops the poster, and adds that row's sentence.
+- `{ with {images} AI-generated images}` appears only when the summary's `images` is above 0, with
+  that exact number. Never call them photos of the user's business.
 - Keep *"It's silent, so add music in the app you post from."* It is the one line that stops a user
   expecting sound, so never trim it for brevity.
 - **Name the look only if the user asked for a style.** Then confirm it in a few words in the file
@@ -485,9 +543,13 @@ a URL on its own line.
   b12.io makes videos — it does not — and do NOT promise that B12 will make one for the user.
 - **Never state or imply that the video appears on the generated website**, that signing up uploads
   it, or that B12 places it. The site is generated in the same colors; that is all that carries.
-- These videos are silent animated type and color. Never claim, offer, or imply footage, photos, a
-  logo, voiceover, music, sound effects, captions over footage, or a presenter. If the user asks for
-  one, say in one line that these videos are animated text and color, and build that.
+- These videos are silent animated type over color and AI-generated images. Never claim, offer, or
+  imply footage, a logo, voiceover, music, sound effects, captions over footage, or a presenter. If
+  the user asks for one, say in one line that these videos are animated text and images, and build
+  that.
+- **The images are illustrations, not records.** Never present a generated image as the user's
+  actual premises, product, food, team, or customers, and never generate text, logos, or
+  recognizable people. Never claim more images than the summary's `images` count.
 - Never edit, trim, convert, or caption a video the user already has. That is a different job.
 - Never invent a date, price, offer, address, website, handle, claim, or name, and never put a
   `[bracketed]` placeholder on screen.
@@ -497,7 +559,7 @@ a URL on its own line.
 - Never speed up beats, shorten their timing, or edit the script to fit more words. Cut words or
   beats instead. Pace changes transitions, never reading time, so never describe it as anything else.
 - Never claim a look, motion, effect, or font the script's summary did not report. An effect it
-  cannot draw (3D, particles, animated logos, photos, music sync) gets one line naming the closest
+  cannot draw (3D, particles, animated logos, footage, music sync) gets one line naming the closest
   thing you made instead, never silence and never a promise.
 - The format you name is the `format` the script printed. Never call a GIF or HTML file an MP4, and
   never claim a video, poster, or storyboard you did not produce.

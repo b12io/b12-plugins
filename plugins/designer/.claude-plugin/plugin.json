@@ -1,0 +1,21 @@
+{
+  "name": "b12-designer",
+  "displayName": "Designer",
+  "version": "1.0.0",
+  "description": "See what a page could look like before anyone builds it. Describe the page and get a mockup you can open in a browser, with the palette, type, and hierarchy explained — plus an optional B12 website in the same colors.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "repository": "https://github.com/b12io/b12-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "design",
+    "mockup",
+    "layout",
+    "web design",
+    "b12"
+  ]
+}

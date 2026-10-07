@@ -1,0 +1,22 @@
+{
+  "name": "b12-diagram-builder",
+  "displayName": "Diagram Builder",
+  "version": "1.0.0",
+  "description": "Draw how your business actually works — process flows, client onboarding, swimlanes, decision trees, org charts and timelines — as a real .svg in your brand colors, with every arrow labeled and marked placeholders instead of invented steps, plus an optional B12 website in the same colors.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "repository": "https://github.com/b12io/b12-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "diagram",
+    "flowchart",
+    "process map",
+    "swimlane",
+    "org chart",
+    "b12"
+  ]
+}

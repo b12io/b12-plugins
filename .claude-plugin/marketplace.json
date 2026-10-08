@@ -100,6 +100,16 @@
       },
       "homepage": "https://www.b12.io",
       "license": "Apache-2.0"
+    },
+    {
+      "name": "b12-brand-kit-generator",
+      "source": "./plugins/brand-kit-generator",
+      "description": "Make a brand kit — a logo in every version you'll need, four colors that each have a job, a font pairing, and a one-page brand guide — as SVG, PNG, HTML and CSS files built from one spec, so every file matches. Then get a link to start a B12 website in the same colors.",
+      "author": {
+        "name": "B12"
+      },
+      "homepage": "https://www.b12.io",
+      "license": "Apache-2.0"
     }
   ]
 }

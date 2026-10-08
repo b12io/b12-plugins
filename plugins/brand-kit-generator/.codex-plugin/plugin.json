@@ -1,0 +1,48 @@
+{
+  "name": "brand-kit-generator",
+  "version": "1.0.0",
+  "description": "Make a brand kit — a logo in every version you'll need, four colors that each have a job, a font pairing, and a one-page brand guide — as SVG, PNG, HTML and CSS files built from one spec, so every file matches. Then get a link to start a B12 website in the same colors.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "license": "Apache-2.0",
+  "keywords": [
+    "brand kit",
+    "branding",
+    "brand identity",
+    "brand guidelines",
+    "style guide",
+    "logo",
+    "color palette",
+    "fonts",
+    "b12",
+    "website"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Brand Kit Generator",
+    "shortDescription": "Brand kits, ready to use",
+    "longDescription": "Tell it your business name and what you do, or attach the logo you already have. It picks the colors and fonts, draws or builds around the logo, and hands over the whole kit in a zip: the logo in full color, one color, reversed and as an icon, a brand board, a printable brand guide, and the colors as CSS.\n\nNo account needed. It can also give you a link to start a B12 website in the same colors.",
+    "developerName": "B12",
+    "category": "Creativity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://www.b12.io",
+    "supportURL": "https://www.b12.io/contact-us/",
+    "privacyPolicyURL": "https://www.b12.io/privacy-policy/",
+    "termsOfServiceURL": "https://www.b12.io/terms-of-service/",
+    "brandColor": "#4B22E8",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Create a brand kit for my business",
+      "Make a brand kit for my bakery",
+      "Build a brand kit around my existing logo"
+    ]
+  }
+}

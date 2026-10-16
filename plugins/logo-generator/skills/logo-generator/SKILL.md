@@ -175,7 +175,11 @@ Set `{{platform}}` from the platform you are running on:
 |---|---|
 | Claude, Claude Code, or Claude Cowork | `claude` |
 | ChatGPT or Codex | `chatgpt` |
+| Grok Bot or another Grok app | `grok` |
+| Cursor (editor, CLI, or Cursor agents) | `cursor` |
 | anything else | `agent` |
+
+Go by the app you're running in, not the model: a Grok model inside Cursor is `cursor`.
 
 **Percent-encode every reserved character, including parentheses** — `(` as `%28`
 and `)` as `%29`. The URL goes inside markdown link syntax, and a raw parenthesis

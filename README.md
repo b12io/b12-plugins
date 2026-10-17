@@ -63,6 +63,18 @@ claude --plugin-dir /path/to/b12-claude-plugin
 
 Install through the plugin manager in Claude Desktop.
 
+### Kimi Code CLI
+
+The **Website Generator** skill also runs on Kimi Code. Install directly from GitHub:
+
+```
+/plugins install https://github.com/b12io/b12-claude-plugin
+```
+
+After installing, run `/reload` or start a fresh session with `/new`.
+
+> The **B12 Website Editor** skill is not available on Kimi Code — it requires browser access, which is only available in Claude Cowork.
+
 ## License
 
 Apache 2.0

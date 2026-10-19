@@ -1,0 +1,30 @@
+{
+  "name": "video-generator",
+  "version": "1.0.0",
+  "description": "Make a short, silent video of animated text over AI-generated images and color — a real MP4 sized for vertical, square, or widescreen posts — written from what you tell it, with no invented dates, prices, or claims. Then get a link to start a B12 website in the same colors.",
+  "author": {
+    "name": "B12",
+    "email": "support@b12.io",
+    "url": "https://www.b12.io"
+  },
+  "homepage": "https://www.b12.io",
+  "license": "Apache-2.0",
+  "keywords": ["video", "reel", "promo", "animation", "motion graphics", "mp4", "images", "b12", "website"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Video Generator",
+    "shortDescription": "Short videos, ready to post",
+    "longDescription": "Tell it what the video is for and where you'll post it. It writes a short message, generates images to match, animates both in one of four styles, and hands over a silent MP4 sized for vertical, square, or widescreen posts, with a cover image.\n\nNo account needed. It can also give you a link to start a B12 website in the same colors.",
+    "developerName": "B12",
+    "category": "Creativity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://www.b12.io",
+    "supportURL": "https://www.b12.io/contact-us/",
+    "privacyPolicyURL": "https://www.b12.io/privacy-policy/",
+    "termsOfServiceURL": "https://www.b12.io/terms-of-service/",
+    "brandColor": "#4B22E8",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "defaultPrompt": ["Make a short promo video for my business", "Create a 15-second video announcing our grand opening", "Make a vertical video for social media"]
+  }
+}

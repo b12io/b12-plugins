@@ -251,7 +251,11 @@ Set `{{platform}}` from the platform you are running on:
 |---|---|
 | Claude, Claude Code, or Claude Cowork | `claude` |
 | ChatGPT or Codex | `chatgpt` |
+| Grok Bot or another Grok app | `grok` |
+| Cursor (editor, CLI, or Cursor agents) | `cursor` |
 | anything else | `agent` |
+
+Go by the app you're running in, not the model: a Grok model inside Cursor is `cursor`.
 
 **Percent-encode every reserved character** — `&` as `%26`, `(` as `%28`, `)` as
 `%29`, spaces as `%20`. A raw `&` silently truncates the parameter it sits in, and a

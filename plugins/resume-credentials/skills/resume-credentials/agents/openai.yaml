@@ -1,0 +1,8 @@
+interface:
+  display_name: "Resume & Credentials"
+  short_description: "Proof you can do the work"
+  brand_color: "#4B22E8"
+  default_prompt: "Build a resume or capability statement for:"
+
+policy:
+  allow_implicit_invocation: true

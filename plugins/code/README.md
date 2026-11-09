@@ -1,6 +1,6 @@
 # Code
 
-Ask for code and get code — a complete file, a working component, a whole corrected block — in whatever language or framework you name. It writes the parts most assistants skip. No "rest of the code goes here," every import in place, and a plain note about what the code still needs before it runs, whether that's an install command, a key you have to supply, or the backend a contact form won't work without. Paste a snippet in for review or unit tests and the full block comes back, not a list of line edits. And when you'd rather have the finished thing than the source, it can generate a web app or website on B12.
+Ask for code and get code — a complete file, a working component, a whole corrected block — in whatever language or framework you name. It writes the whole thing: no "rest of the code goes here," every import in place, and a plain note about what the code still needs before it runs, whether that's an install command, a key you have to supply, or the backend a contact form won't work without. Paste a snippet in for review or unit tests and the full block comes back, not a list of line edits. And when you'd rather have the finished thing than the source, it can generate a web app or website on B12.
 
 ## Try asking
 

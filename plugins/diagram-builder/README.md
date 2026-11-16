@@ -1,8 +1,8 @@
-# Diagram Builder
+# Diagram
 
-Describe how your work actually flows — the steps, the people, the handoffs — and it draws the diagram: process flows, swimlanes, decision trees, org charts, timelines and journey maps, with every arrow labeled and nothing invented.
+Describe how your work flows — the steps, the people, the handoffs — and it draws the diagram: process flows, swimlanes, decision trees, org charts, timelines and journey maps, with labeled arrows, and marked placeholders for any step you didn't describe.
 
-You get a real .svg file in your brand colors, sharp at any size, no account needed and nothing uploaded. Ask for a matching website too, and you'll get a free B12 website link in the same colors.
+You get a real .svg file in your brand colors, sharp at any size, no account needed and nothing uploaded. It can also give you a link to start a B12 website in the same colors.
 
 ## Try asking
 
@@ -12,7 +12,7 @@ You get a real .svg file in your brand colors, sharp at any size, no account nee
 
 ## Install
 
-- **claude.ai, Claude Desktop, and Cowork:** open **Customize → Plugins**, search for "Diagram Builder" by B12, and add it.
+- **claude.ai, Claude Desktop, and Cowork:** open **Customize → Plugins**, search for "Diagram" by B12, and add it.
 - **Claude Code:**
 
   ```bash

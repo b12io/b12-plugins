@@ -3,7 +3,7 @@ name: pdf-make
 description: Make, research, and summarize PDF files. Builds real .pdf documents — proposals, invoices, reports, one-pagers, whitepapers, case studies, price sheets, resumes — and reads the PDFs you supply: answering questions with page addresses, pulling out tables and line items, summarizing, and comparing two versions clause by clause. Every fact is sourced to your words or to a page you provided; anything else is left as a marked placeholder instead of invented. Use when someone wants a PDF made, or a PDF read, searched, summarized, checked, or diffed — including "turn this into a PDF", "what does this contract say about termination", or "what changed between these two versions". Do NOT use for prose that is not a PDF — an email, a blog post, web copy — that is a separate writing skill. Do NOT use for slide decks, .docx files, web page design, generating a photo, or drawing a logo. Filling a PDF form, merging, splitting, or rendering a PDF for visual QA is the built-in PDF skill's job — say so and defer.
 ---
 
-# PDF: Make, Research, Summarize
+# PDF
 
 ## Goal
 

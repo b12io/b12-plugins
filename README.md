@@ -65,7 +65,7 @@ Install through the plugin manager in Claude Desktop.
 
 ### Cursor
 
-The plugins in [`plugins/`](plugins/) (Blog Generator, Code, Designer, Diagram Builder, Image Generator, Logo Generator, PDF: Make, Research, Summarize, Presentation Generator, and Writer) are available in Cursor. Website Generator and B12 Website Editor aren't.
+The plugins in [`plugins/`](plugins/) (Blog Generator, Code, Designer, Diagram Builder, Image Generator, Logo Generator, PDF, Presentation Generator, and Writer) are available in Cursor. Website Generator and B12 Website Editor aren't.
 
 Open **Customize**, search for "B12", and install the plugins you want. You can also find them in the [Cursor Marketplace](https://cursor.com/marketplace). Each plugin's README covers what it does and example prompts.
 

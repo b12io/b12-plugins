@@ -94,7 +94,7 @@
     {
       "name": "b12-pdf-make",
       "source": "./plugins/pdf-make",
-      "description": "Make PDFs that hold up as records — proposals, invoices, reports, one-pagers, whitepapers — and read the PDFs you supply: answer questions with page addresses, pull out tables, summarize, and compare two versions. Every fact is sourced or left as a marked placeholder, never invented.",
+      "description": "Make PDFs — proposals, invoices, reports, one-pagers, whitepapers — and read the PDFs you supply: answer questions with page addresses, pull out tables, summarize, and compare two versions. Facts come from your own words or your PDFs, and anything missing is left as a marked placeholder.",
       "author": {
         "name": "B12"
       },

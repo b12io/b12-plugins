@@ -1,5 +1,5 @@
 interface:
-  display_name: "PDF: Make, Research, Summarize"
+  display_name: "PDF"
   short_description: "PDFs made simple"
   brand_color: "#4B22E8"
   default_prompt: "Make, research, or summarize a PDF:"

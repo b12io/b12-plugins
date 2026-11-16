@@ -1,4 +1,4 @@
-# Diagram Builder
+# Diagram
 
 Describe how your work actually flows — the steps, the people, the handoffs — and it draws the diagram: process flows, swimlanes, decision trees, org charts, timelines and journey maps, with every arrow labeled and nothing invented.
 
@@ -12,7 +12,7 @@ You get a real .svg file in your brand colors, sharp at any size, no account nee
 
 ## Install
 
-- **claude.ai, Claude Desktop, and Cowork:** open **Customize → Plugins**, search for "Diagram Builder" by B12, and add it.
+- **claude.ai, Claude Desktop, and Cowork:** open **Customize → Plugins**, search for "Diagram" by B12, and add it.
 - **Claude Code:**
 
   ```bash

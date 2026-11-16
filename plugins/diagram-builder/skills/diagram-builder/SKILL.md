@@ -3,7 +3,7 @@ name: diagram-builder
 description: Draw business diagrams as real .svg files — process flows, client onboarding journeys, swimlanes, decision trees, org charts, timelines, journey maps, quadrants — in your brand colors, sized so the text actually fits its box, with every step taken from what you said and anything you did not say left as a marked placeholder instead of invented. Use when someone wants a diagram, flowchart, process map, swimlane, org chart, decision tree, journey map, timeline, or 2x2 drawn, redrawn, or turned into a file, including asks like "map our client onboarding" or "turn our intake process into a flowchart for our services page". Do NOT use for a chart of values — a bar, line, pie, or trend chart — and do NOT use for an interactive, exploratory, or in-conversation visual: that is the built-in Visualize skill's job, and you cannot invoke it on the user's behalf. Do NOT use for a page mockup or wireframe, a photo or illustration, a logo or favicon, a slide deck, a PDF, or prose; those are separate skills.
 ---
 
-# Diagram Builder
+# Diagram
 
 ## Goal
 

@@ -1,4 +1,4 @@
-# PDF: Make, Research, Summarize
+# PDF
 
 Describe the document you need — proposals, invoices, reports, one-pagers — and it builds the whole thing as a real PDF. Or attach a PDF you already have and it reads that instead: answering questions with page numbers, pulling out tables, summarizing, comparing two versions.
 
@@ -12,7 +12,7 @@ Every fact traces to your own words or to a page you supplied, and anything else
 
 ## Install
 
-- **claude.ai, Claude Desktop, and Cowork:** open **Customize → Plugins**, search for "PDF: Make, Research, Summarize" by B12, and add it.
+- **claude.ai, Claude Desktop, and Cowork:** open **Customize → Plugins**, search for "PDF" by B12, and add it.
 - **Claude Code:**
 
   ```bash

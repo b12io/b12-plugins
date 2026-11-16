@@ -1,8 +1,8 @@
 # PDF
 
-Describe the document you need — proposals, invoices, reports, one-pagers — and it builds the whole thing as a real PDF. Or attach a PDF you already have and it reads that instead: answering questions with page numbers, pulling out tables, summarizing, comparing two versions.
+Describe the document you need — proposals, invoices, reports, one-pagers — and it builds it as a PDF. Or attach a PDF you already have and it reads that instead: answering questions with page numbers, pulling out tables, summarizing, comparing two versions.
 
-Every fact traces to your own words or to a page you supplied, and anything else is left as a marked placeholder rather than quietly invented. It researches the PDFs you hand it, not the web. You get an editable .pdf, no account needed and nothing uploaded. Ask for a matching website too and you'll get a free B12 website link.
+Facts come from your own words or the pages you supplied, and anything missing is left as a marked placeholder. It researches the PDFs you hand it, not the web. You get a .pdf file, no account needed and nothing uploaded. It can also give you a link to start a B12 website.
 
 ## Try asking
 
